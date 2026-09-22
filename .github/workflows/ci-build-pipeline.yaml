@@ -6,7 +6,7 @@ on:
 
 jobs:
   lint:
-    runs-on: mkammara-gha-ubuntu-runner
+    runs-on: mkammara-gha-runner
     steps:
       - name: checkout the code
         uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
 
   test:
     needs: lint
-    runs-on: mkammara-gha-ubuntu-runner
+    runs-on: mkammara-gha-runner
     steps:
       - name: checkout the code
         uses: actions/checkout@v4
@@ -40,7 +40,7 @@ jobs:
   
   build:
     needs: test
-    runs-on: mkammara-gha-ubuntu-runner
+    runs-on: mkammara-gha-runner
     steps:
       - name: checkout the code
         uses: actions/checkout@v4
